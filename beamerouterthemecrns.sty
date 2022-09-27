@@ -1,0 +1,526 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerouterthemecrns}[2017/01/23 CRNS outer theme]
+\RequirePackage{etoolbox}
+\RequirePackage{calc}
+\RequirePackage{pgfopts}
+\RequirePackage{adjustbox}
+\usepackage{tikz}
+
+\definecolor{cffffff}{RGB}{255,255,255}
+\definecolor{cae2626}{RGB}{174,38,38}
+\definecolor{ce2e0e1}{RGB}{226,224,225}
+\definecolor{ce1dfe0}{RGB}{225,223,224}
+\definecolor{ce3e2e2}{RGB}{227,226,226}
+\definecolor{cd5d4d3}{RGB}{213,212,211}
+\definecolor{cf3eee6}{RGB}{243,238,230}
+\definecolor{ce3e1e2}{RGB}{227,225,226}
+\definecolor{cdad1d7}{RGB}{218,209,215}
+\definecolor{ce2e2e2}{RGB}{226,226,226}
+\definecolor{ce9e9ea}{RGB}{233,233,234}
+\definecolor{ce9eaea}{RGB}{233,234,234}
+\definecolor{cc9c6c6}{RGB}{201,198,198}
+\definecolor{cfaf8f4}{RGB}{250,248,244}
+
+\pgfkeys{
+  /crns/outer/numbering/.cd,
+    .is choice,
+    none/.code=\setbeamertemplate{frame numbering}[none],
+    counter/.code=\setbeamertemplate{frame numbering}[counter],
+    fraction/.code=\setbeamertemplate{frame numbering}[fraction],
+    shifted/.code=\setbeamertemplate{frame numbering}[shifted],
+}
+\pgfkeys{
+  /crns/outer/progressbar/.cd,
+    .is choice,
+    none/.code={%
+      \setbeamertemplate{headline}[plain]
+      \setbeamertemplate{frametitle}[plain]
+      \setbeamertemplate{footline}[plain]
+    },
+    head/.code={\pgfkeys{/crns/outer/progressbar=none}
+      \addtobeamertemplate{headline}{}{%
+        \usebeamertemplate*{progress bar in head/foot}
+      }
+    },
+    frametitle/.code={\pgfkeys{/crns/outer/progressbar=none}
+      \addtobeamertemplate{frametitle}{}{%
+        \usebeamertemplate*{progress bar in head/foot}
+      }
+    },
+    foot/.code={\pgfkeys{/crns/outer/progressbar=none}
+      \addtobeamertemplate{footline}{}{%
+        \usebeamertemplate*{progress bar in head/foot}%
+      }
+    },
+}
+\newcommand{\crns@outer@setdefaults}{
+  \pgfkeys{/crns/outer/.cd,
+    numbering=counter,
+    progressbar=none,
+  }
+}
+
+
+\setbeamertemplate{navigation symbols}{}
+
+\usebackgroundtemplate{
+%\includegraphics[width=\paperwidth, height=\paperheight]{logos/background_body.eps}
+  \vbox to 0pt {
+  \hspace*{3.35em}
+  \begin{adjustbox}{width=\paperwidth, center}
+  \begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]
+\path[fill=cffffff,rounded corners=0.0000cm] (0.0000,0.0000) rectangle
+  (1062.9921,797.2441);
+\path[fill=cae2626,rounded corners=0.0000cm] (-0.0433,792.7287) rectangle
+  (1063.0340,797.2523);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (108.5450,68.0840) .. controls (107.5400,70.0290) and (105.1490,70.7910) ..
+  (103.2060,69.7840) .. controls (101.2620,68.7800) and (100.5000,66.3890) ..
+  (101.5070,64.4450) .. controls (102.5100,62.5020) and (104.9020,61.7390) ..
+  (106.8460,62.7450) .. controls (108.7890,63.7510) and (109.5490,66.1420) ..
+  (108.5450,68.0840);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (115.2480,73.5860) .. controls (114.3140,75.3930) and (112.0910,76.1010) ..
+  (110.2830,75.1670) .. controls (108.4760,74.2320) and (107.7670,72.0080) ..
+  (108.7030,70.2020) .. controls (109.6370,68.3930) and (111.8600,67.6850) ..
+  (113.6680,68.6200) .. controls (115.4750,69.5560) and (116.1830,71.7780) ..
+  (115.2480,73.5860);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (103.6910,79.8960) .. controls (102.7550,81.7030) and (100.5330,82.4120) ..
+  (98.7260,81.4770) .. controls (96.9170,80.5410) and (96.2100,78.3210) ..
+  (97.1440,76.5120) .. controls (98.0780,74.7040) and (100.3020,73.9960) ..
+  (102.1100,74.9320) .. controls (103.9180,75.8650) and (104.6250,78.0870) ..
+  (103.6910,79.8960);
+\path[cm={{1.66676,0.0,0.0,1.4466,(859.89023,677.34441)}},fill=cae2626]
+  (121.4610,80.9430) .. controls (120.5960,82.6140) and (118.5410,83.2690) ..
+  (116.8700,82.4060) .. controls (115.1980,81.5420) and (114.5450,79.4870) ..
+  (115.4080,77.8150) .. controls (116.2730,76.1430) and (118.3260,75.4910) ..
+  (120.0000,76.3540) .. controls (121.6700,77.2190) and (122.3240,79.2720) ..
+  (121.4610,80.9430);
+\path[cm={{1.66676,0.0,0.0,1.31322,(859.89023,688.70929)}},fill=cae2626]
+  (111.6960,81.6521) .. controls (110.8310,83.3251) and (107.3310,82.3642) ..
+  (107.3310,82.3642) -- (105.1930,81.3000) .. controls (106.0580,79.6300) and
+  (108.1130,78.9730) .. (109.7840,79.8380) .. controls (111.4550,80.7010) and
+  (112.4840,79.9821) .. (111.6210,81.6521);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (97.6070,70.0210) .. controls (96.6010,71.9640) and (94.2110,72.7240) ..
+  (92.2670,71.7210) .. controls (90.3240,70.7140) and (89.5610,68.3260) ..
+  (90.5670,66.3810) .. controls (91.5720,64.4380) and (93.9630,63.6760) ..
+  (95.9060,64.6810) .. controls (97.8500,65.6860) and (98.6110,68.0760) ..
+  (97.6070,70.0210);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (95.2230,81.4410) -- (87.5581,81.8661) .. controls (87.5581,81.8661) and
+  (87.1790,79.7450) .. (88.1820,77.8040) .. controls (89.1880,75.8580) and
+  (91.5780,75.0980) .. (93.5220,76.1030) .. controls (95.4660,77.1090) and
+  (96.2270,79.4990) .. (95.2230,81.4410);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (88.2860,74.1210) .. controls (87.2810,76.0660) and (84.8900,76.8260) ..
+  (82.9460,75.8220) .. controls (81.0030,74.8150) and (80.2420,72.4260) ..
+  (81.2460,70.4820) .. controls (82.2520,68.5390) and (84.6420,67.7770) ..
+  (86.5860,68.7820) .. controls (88.5310,69.7870) and (89.2910,72.1790) ..
+  (88.2860,74.1210);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (77.5210,77.4770) .. controls (76.7870,78.8980) and (75.0420,79.4550) ..
+  (73.6230,78.7200) .. controls (72.2040,77.9850) and (71.6460,76.2410) ..
+  (72.3820,74.8200) .. controls (73.1140,73.4010) and (74.8610,72.8450) ..
+  (76.2800,73.5800) .. controls (77.7000,74.3120) and (78.2560,76.0590) ..
+  (77.5210,77.4770);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (71.9960,70.1610) .. controls (71.3680,71.3770) and (69.8740,71.8500) ..
+  (68.6590,71.2230) .. controls (67.4430,70.5940) and (66.9670,69.1010) ..
+  (67.5970,67.8840) .. controls (68.2250,66.6690) and (69.7190,66.1960) ..
+  (70.9340,66.8220) .. controls (72.1480,67.4510) and (72.6240,68.9450) ..
+  (71.9960,70.1610);
+\path[cm={{1.66676,0.0,0.0,1.66676,(859.89023,660.61866)}},fill=cae2626]
+  (64.0710,78.5830) .. controls (63.4420,79.8000) and (61.9480,80.2730) ..
+  (60.7330,79.6450) .. controls (59.5190,79.0180) and (59.0420,77.5240) ..
+  (59.6710,76.3080) .. controls (60.2990,75.0930) and (61.7940,74.6180) ..
+  (63.0080,75.2460) .. controls (64.2230,75.8750) and (64.6990,77.3680) ..
+  (64.0710,78.5830);
+\path[cm={{1.01689,1.32057,-1.32057,1.01689,(1035.3811,557.33061)}},fill=cae2626,rounded
+  corners=0.0000cm] (110.4640,75.8180) rectangle (120.7520,76.1660);
+\path[cm={{1.42708,0.86105,-0.86105,1.42708,(945.50082,583.02465)}},fill=cae2626,rounded
+  corners=0.0000cm] (104.1780,68.8310) rectangle (114.4660,69.1780);
+\path[cm={{1.62559,-0.36835,0.36835,1.62559,(834.67504,699.37657)}},fill=cae2626,rounded
+  corners=0.0000cm] (91.2160,79.0640) rectangle (101.5040,79.4110);
+\path[cm={{1.62559,-0.36819,0.36819,1.62559,(839.22728,700.09844)}},fill=cae2626,rounded
+  corners=0.0000cm] (94.5810,67.1080) rectangle (104.8700,67.4560);
+\path[cm={{1.42091,0.87138,-0.87138,1.42091,(956.13055,589.371)}},fill=cae2626,rounded
+  corners=0.0000cm] (99.4580,80.7510) rectangle (105.4630,80.9970);
+\path[cm={{1.66676,0.0,0.0,1.66676,(861.64023,658.49366)}},fill=cae2626]
+  (111.7150,73.0810) -- (107.9390,82.6530) -- (108.2640,82.7780) --
+  (112.0390,73.2060) -- cycle;
+\path[cm={{-0.61153,1.55058,-1.55058,-0.61153,(1206.3249,669.27213)}},fill=cae2626,rounded
+  corners=0.0000cm] (97.0150,73.1480) rectangle (107.3020,73.4960);
+\path[cm={{-0.6117,1.55042,-1.55042,-0.6117,(1186.5152,687.48977)}},fill=cae2626,rounded
+  corners=0.0000cm] (87.3520,74.5600) rectangle (97.6410,74.9090);
+\path[cm={{-1.50691,0.71237,-0.71237,-1.50691,(1193.7003,820.91143)}},fill=cae2626,rounded
+  corners=0.0000cm] (84.2010,70.3870) rectangle (94.4890,70.7330);
+\path[cm={{-1.50691,0.7122,-0.7122,-1.50691,(1163.7923,842.26841)}},fill=cae2626,rounded
+  corners=0.0000cm] (73.7920,74.7780) rectangle (84.0800,75.1250);
+\path[cm={{-0.99655,-1.3359,1.3359,-0.99655,(954.94382,949.55897)}},fill=cae2626,rounded
+  corners=0.0000cm] (66.8480,72.2010) rectangle (77.1370,72.5480);
+\path[cm={{1.1774,-1.17973,1.17973,1.1774,(805.26529,773.7984)}},fill=cae2626,rounded
+  corners=0.0000cm] (60.3250,73.2850) rectangle (70.6120,73.6330);
+\begin{scope}[opacity=0.428,transparency group]
+  \path[draw=ce2e0e1,line width=0.750pt] (792.3421,48.4866) circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (775.7796,94.4240) circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.732pt] (890.4046,47.9241) circle (0.2711cm);
+  \path[draw=ce2e0e1,miter limit=4.00,line width=1.392pt] (889.1448,105.6819)
+    circle (0.1897cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (825.5296,154.6741) circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (967.6600,67.0129) circle (0.2778cm);
+  \path[draw=ce2e0e1,miter limit=4.00,line width=0.834pt] (1039.3241,123.6563)
+    circle (0.1903cm);
+  \path[draw=ce2e0e1,miter limit=4.00,line width=0.914pt] (955.4315,180.3498)
+    circle (0.1903cm);
+  \path[draw=ce2e0e1,miter limit=4.00,line width=1.230pt] (915.8709,208.7591)
+    circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (878.7127,229.5670) circle (0.2778cm);
+  \path[draw=ce2e0e1,miter limit=4.00,line width=1.230pt] (985.5931,228.0001)
+    circle (0.1890cm);
+  \path[draw=ce2e0e1,miter limit=4.00,line width=1.130pt] (897.2010,328.7816)
+    circle (0.2111cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (820.5525,335.2795) circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.737pt] (819.7903,385.3805) circle (0.2730cm);
+  \path[draw=ce2e0e1,line width=0.724pt] (869.8733,413.7684) circle (0.2683cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (956.8099,416.7736) circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (957.5423,459.5002) circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (909.1233,479.9456) circle (0.2778cm);
+  \path[draw=ce2e0e1,miter limit=4.00,line width=1.390pt] (1045.0985,337.9526)
+    circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (1003.2513,496.2875) circle (0.2778cm);
+  \path[draw=ce2e0e1,line width=0.750pt] (1003.4436,353.9445) circle (0.2778cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (792.1829,47.8709) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (890.0565,48.5779) circle (0.1058cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (915.1370,29.6503) circle (0.0740cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (890.4744,5.5265) circle (0.0811cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (865.3934,29.9861) circle (0.0634cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (865.1824,59.6416) circle (0.0599cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (816.9315,60.1453) circle (0.0493cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (750.5135,60.7451) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (879.6961,192.7028) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (889.8494,144.5374) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (931.4827,142.0839) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (866.5149,106.3535) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (775.6766,93.7972) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (889.1976,105.4698) ellipse (0.0309cm and
+    0.0383cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (967.7669,67.0129) circle (0.1622cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (992.2083,49.9492) circle (0.1058cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1052.3124,7.4015) circle (0.1763cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1041.8344,93.4614) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (991.4227,124.2384) circle (0.0705cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (972.4471,103.0984) circle (0.0352cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (984.6014,157.3008) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (968.3382,155.1440) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (954.7669,180.3928) circle (0.0493cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1019.4496,142.3805) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1039.5487,123.6171) circle (0.0423cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1034.6810,158.4687) circle (0.0952cm);
+  \path[xscale=-1.000,yscale=1.000,fill=ce2e0e1,line width=0.750pt]
+    (-1044.7069,290.0372) circle (0.0564cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1058.0336,396.1853) circle (0.1163cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1044.9711,338.1963) circle (0.0558cm);
+  \path[fill=ce1dfe0,line width=0.750pt] (1003.5472,353.1124) circle (0.1478cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (959.1849,335.3312) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (985.5892,277.3448) circle (0.0564cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (956.3172,227.2689) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (915.6585,352.9571) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (897.3621,327.9431) circle (0.0558cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (879.7728,334.3956) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (869.8733,351.3661) circle (0.0683cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (820.1107,334.8375) circle (0.0957cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (870.1390,414.7404) circle (0.0708cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (921.5047,415.8164) circle (0.0846cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (909.6126,415.0664) circle (0.0634cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (909.7698,480.1705) circle (0.0705cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (942.9681,494.5908) circle (0.0987cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (957.3099,458.9573) circle (0.0987cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (957.8099,415.5235) circle (0.0705cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1058.8480,459.1999) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (941.9681,546.6312) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (959.3226,283.8373) circle (0.0882cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (985.3494,228.2134) circle (0.0493cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (817.5296,39.2991) circle (0.0387cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (800.1546,38.1741) circle (0.0493cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (865.7796,67.5490) circle (0.0317cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (915.5941,208.3636) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (825.5296,154.7991) circle (0.1481cm);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.760pt] (1002.6329,0.1410) .. controls (1002.6329,1.5553) and
+    (1002.6328,8.0076) .. (1002.6328,8.0076) -- (1062.8253,8.0658);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.280pt] (991.0066,0.1411) -- (991.0691,49.1814);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.120pt] (859.8857,5.3257) -- (890.3796,5.3257) --
+    (891.0867,48.4591) -- (991.1424,48.7243);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.280pt] (993.0869,51.5527) -- (1019.0730,51.2875) --
+    (1018.8963,30.1627) -- (1062.7369,29.9860);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.840pt] (1062.6485,67.5511) -- (970.9381,67.4413);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.760pt] (967.2775,70.6447) -- (966.9846,155.2261) --
+    (826.3864,155.3211) -- (826.5633,93.9797) -- (774.2373,94.8635);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.520pt] (792.4454,47.0891) -- (792.2686,194.7420);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.280pt] (822.8509,156.5582) -- (822.8209,170.5021) --
+    (879.5966,170.7432) -- (879.8680,193.4705) -- (792.4974,193.0741);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (786.2404,194.3241) -- (775.2980,194.3881) --
+    (775.4837,95.3968);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (759.6091,50.1385) -- (778.4800,50.1385) -- (778.8180,73.5767)
+    -- (832.9483,73.5157);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (832.8880,73.3911) -- (832.4640,40.0168) -- (881.8061,39.5900);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (915.4516,29.8824) -- (865.1006,30.3181) -- (864.9541,60.3309)
+    -- (816.7459,60.1202) -- (817.3269,38.9132) -- (800.4446,39.0012);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (819.3154,0.1991) -- (819.3154,12.3083) -- (850.7817,12.3083);
+  \path[draw=ce3e2e2,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.200pt] (908.0573,2.5856) -- (906.6949,166.4932) --
+    (1005.4361,166.0398) -- (1006.3326,325.2209) -- (922.7941,324.4746) --
+    (922.5404,241.0183) -- (888.7243,241.1183) -- (888.6853,402.5029) --
+    (987.0767,402.2780) -- (986.9302,561.3342) -- (918.8409,561.0235);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.760pt] (942.7181,545.0098) -- (941.8823,494.0375) --
+    (1003.5042,494.5982) -- (1003.4262,353.8839) -- (915.6200,354.0304) --
+    (915.9055,208.1127) -- (946.8969,208.0737) -- (946.0648,284.1913) --
+    (1019.3539,283.8806) -- (1020.0609,142.8557) -- (931.9226,143.4164) --
+    (932.0439,0.2146);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,draw opacity=0.560,even odd
+    rule,line width=0.800pt] (881.4827,39.2516) -- (881.6957,67.9628) --
+    (865.8073,68.1030) -- (865.3653,105.8233) -- (888.6999,105.8233) --
+    (888.9650,146.0400);
+  \path[draw=cd5d4d3,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.286pt] (974.1717,59.3310) -- (974.0837,0.2079);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1063.6851,92.8239) -- (1040.5363,93.0739) --
+    (1039.9327,123.8545) -- (991.1423,123.8545) -- (991.1424,102.8181) --
+    (973.1111,102.6414);
+  \path[draw=cf3eee6,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1063.6574,81.2513) .. controls (1061.8896,80.8977) and
+    (946.5946,81.4281) .. (946.5946,81.4281) -- (946.6896,180.7677) --
+    (786.6941,181.1464) -- (787.0011,111.9713) -- (729.9221,112.2035) --
+    (729.9581,224.1298) -- (847.0700,223.7334) -- (847.7771,382.4689) --
+    (781.4681,382.4030) -- (781.3093,439.4009);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (882.4247,546.8812) -- (881.8211,471.0314) --
+    (838.1698,471.1349) -- (838.2308,402.4494) -- (888.7387,402.3814) --
+    (889.4960,454.2502) -- (895.1529,454.0608) -- (895.1529,474.4027);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.440pt] (1058.0424,397.5529) -- (1057.8907,459.6570) --
+    (957.9387,459.8464) -- (958.2316,416.3164) -- (920.8762,415.7557) --
+    (920.8762,401.0315) -- (915.7426,400.9494) -- (916.1335,352.9874);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (937.9326,324.8496) -- (938.6397,382.8324);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (909.0876,479.8273) -- (909.4589,414.7128) --
+    (869.3432,414.6521) -- (869.5503,351.5125) -- (897.3597,351.5125) --
+    (896.8346,328.9887);
+  \path[draw=ce3e1e2,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=2.000pt] (819.0528,383.2466) -- (818.7851,334.7491) --
+    (880.4069,334.1884) -- (880.1546,192.6742);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (985.6546,276.4242) .. controls (985.6546,274.9242) and
+    (985.7796,228.0492) .. (985.7796,228.0492) -- (956.0296,227.6742) --
+    (956.0296,180.0492) -- (976.5296,180.1742) -- (976.4046,162.1742);
+  \path[draw=cdad1d7,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (986.9046,158.1742) -- (1036.5688,158.3382) --
+    (1035.7707,218.5490) -- (1063.6849,218.6100);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.200pt] (1063.7796,227.2992) -- (1053.6546,227.2992) --
+    (1053.2796,273.0492) -- (1063.7796,273.0492);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1063.6546,250.6742) .. controls (1062.6546,250.9242) and
+    (1018.4046,250.1742) .. (1018.4046,250.1742);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1063.6546,262.2992) .. controls (1062.6546,262.0492) and
+    (1044.4046,262.4242) .. (1044.4046,262.4242) -- (1044.4046,289.4242);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1063.6546,289.5492) -- (1045.0296,289.5492) --
+    (1044.7796,338.0492) -- (1063.5296,338.1742);
+  \path[draw=ce2e2e2,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1020.6034,288.2014) -- (1020.7676,353.9838) --
+    (1002.6328,354.1945);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (959.1206,335.7883) -- (958.9387,284.1481);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (968.0024,279.2841) -- (968.0494,263.0170) --
+    (933.6904,263.1030) -- (933.9619,208.3629);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1023.8424,238.3614) .. controls (1023.1352,236.9472) and
+    (1023.8424,183.7818) .. (1023.8424,183.7818) -- (966.4632,183.5104);
+  \path[fill=ce2e0e1,line width=0.750pt] (1050.8934,451.9520) circle (0.1082cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (832.9046,73.0490) circle (0.0493cm);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (749.4028,62.0130) -- (749.6654,223.2030);
+  \path[fill=ce2e0e1,line width=0.750pt] (749.8421,223.7333) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (759.3880,50.3153) circle (0.0483cm);
+  \path[shift={(-7.75316,0.16195)},fill=ce2e0e1,line width=0.750pt]
+    (915.2803,1.5398) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (946.9481,80.8977) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (976.6546,162.1741) circle (0.0423cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1004.0296,165.6741) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (976.6024,180.1138) circle (0.0321cm);
+  \path[fill=ce9e9ea,line width=0.750pt] (966.3934,182.9863) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (786.0296,112.9241) circle (0.1481cm);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (801.9046,198.1742) -- (848.9046,197.6742) --
+    (848.6546,223.5492);
+  \path[fill=ce2e0e1,line width=0.750pt] (848.4046,223.5491) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1005.5296,325.0492) circle (0.1478cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (847.9046,381.9242) circle (0.1306cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (937.9046,383.4242) circle (0.1481cm);
+  \path[fill=ce9eaea,line width=0.750pt] (882.4046,545.9242) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (919.4046,561.1742) circle (0.1481cm);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (1050.6546,453.1742) -- (1050.4046,522.6742) --
+    (949.6546,522.4242);
+  \path[fill=ce2e0e1,line width=0.750pt] (894.4046,473.1742) circle (0.0987cm);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (895.1546,473.4242) -- (935.9046,473.6742) --
+    (936.4046,517.6742);
+  \path[fill=ce2e0e1,line width=0.750pt] (987.0765,559.2555) circle (0.1481cm);
+  \path[draw=cc9c6c6,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (986.7773,0.2302) .. controls (986.7773,1.6445) and
+    (986.7924,13.9993) .. (986.7924,13.9993) -- (1063.0716,14.1762);
+  \path[fill=ce2e0e1,line width=0.750pt] (945.1546,180.1741) circle (0.1481cm);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (842.9505,-0.0639) rectangle
+    (864.7122,17.5483);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (1013.1829,57.0330) rectangle
+    (1034.9446,78.8068);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (1008.5296,233.3023) rectangle
+    (1030.2913,255.0761);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (995.5052,393.9442) rectangle
+    (1017.2669,415.7180);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (931.7088,509.8313) rectangle
+    (953.4705,531.6051);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (869.0692,267.2936) rectangle
+    (890.8309,289.0674);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (782.3841,180.6517) rectangle
+    (804.1458,202.4255);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (815.6404,87.4725) rectangle
+    (837.4022,109.2463);
+  \path[fill=ce9eaea,rounded corners=0.0000cm] (920.1165,86.6381) rectangle
+    (941.8782,108.4119);
+  \path[fill=ce2e0e1,line width=0.750pt] (1019.8513,284.1855) circle (0.1569cm);
+  \path[draw=ce1dfe0,line width=0.750pt] (958.6077,283.3626) circle (0.2778cm);
+  \path[fill=ce3e1e2,line width=0.750pt] (905.9046,166.1741) circle (0.1481cm);
+  \path[fill=cfaf8f4,line width=0.750pt] (781.3743,438.9545) circle (0.0583cm);
+  \path[fill=cfaf8f4,line width=0.750pt] (781.5511,382.9242) circle (0.0583cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1002.9939,495.0552) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1040.8168,15.8439) circle (0.1763cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (730.1609,113.0852) circle (0.1481cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (1034.9310,218.8731) circle (0.1552cm);
+  \path[fill=ce2e0e1,line width=0.750pt] (819.4036,384.5118) circle (0.1306cm);
+  \path[draw=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (922.1531,0.2119) .. controls (922.4450,3.1740) and
+    (924.1520,5.3281) .. (925.9446,6.8865) .. controls (927.2278,8.0020) and
+    (930.1166,9.1830) .. (932.1300,9.1799) .. controls (935.2476,9.1751) and
+    (941.0870,6.2847) .. (941.9656,0.1494);
+  \path[fill=ce2e0e1,line join=miter,line cap=butt,even odd rule,line
+    width=0.800pt] (926.8406,0.1879) -- (937.2781,0.2119) .. controls
+    (937.1531,0.8473) and (936.1020,4.1078) .. (932.0906,4.3682) .. controls
+    (929.9638,4.4214) and (927.2597,2.6530) .. (926.8406,0.1879) -- cycle;
+\end{scope}
+
+\end{tikzpicture}
+\end{adjustbox}
+}
+ % \nointerlineskip%
+}
+
+
+\defbeamertemplate{frame footer}{none}{}
+\defbeamertemplate{frame footer}{custom}[1]{ #1 }
+\defbeamertemplate{frame numbering}{none}{}
+\defbeamertemplate{frame numbering}{counter}{\insertframenumber}
+\defbeamertemplate{frame numbering}{fraction}{
+  \insertframenumber/\inserttotalframenumber
+}
+\defbeamertemplate{frame numbering}{shifted}
+{%
+	
+  \hfill%
+  %\usebeamercolor[fg]{page number in head/foot}%
+  \usebeamercolor[bg]{frametitle}
+  \usebeamerfont{page number in head/foot}%
+  \insertframenumber\,/\,\inserttotalframenumber\hspace*{33pt}\vspace*{-4.5pt}\vskip0pt
+}
+
+
+
+\defbeamertemplate{headline}{plain}{}
+\defbeamertemplate{footline}{plain}{%
+  \begin{beamercolorbox}[wd=\textwidth, sep=3ex]{footline}%
+    \usebeamerfont{page number in head/foot}%
+    \usebeamertemplate*{frame footer}
+    \hfill%
+    \usebeamertemplate*{frame numbering}
+  \end{beamercolorbox}%
+}
+\newlength{\crns@frametitle@padding}
+\setlength{\crns@frametitle@padding}{2.2ex}
+\newcommand{\crns@frametitlestrut@start}{
+  \rule{0pt}{\crns@frametitle@padding +%
+    \totalheightof{%
+      \ifcsdef{crns@frametitleformat}{\crns@frametitleformat X}{X}%
+    }%
+  }%
+}
+\newcommand{\crns@frametitlestrut@end}{
+  \rule[-\crns@frametitle@padding]{0pt}{\crns@frametitle@padding}
+}
+\defbeamertemplate{frametitle}{plain}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[%
+      wd=\paperwidth,%
+      sep=0pt,%
+      leftskip=\crns@frametitle@padding,%
+      rightskip=\crns@frametitle@padding,%
+    ]{frametitle}%
+  \crns@frametitlestrut@start%
+  \insertframetitle%
+  \nolinebreak%
+  \crns@frametitlestrut@end%
+  \end{beamercolorbox}%
+}
+\setbeamertemplate{frametitle continuation}{%
+  \usebeamerfont{frametitle}
+  \romannumeral \insertcontinuationcount
+}
+\newlength{\crns@progressinheadfoot}
+\newlength{\crns@progressinheadfoot@linewidth}
+\setlength{\crns@progressinheadfoot@linewidth}{0.4pt}
+\setbeamertemplate{progress bar in head/foot}{
+  \nointerlineskip
+  \setlength{\crns@progressinheadfoot}{%
+    \paperwidth * \ratio{\insertframenumber pt}{\inserttotalframenumber pt}%
+  }%
+  \begin{beamercolorbox}[wd=\paperwidth]{progress bar in head/foot}
+    \tikzexternaldisable%
+    \begin{tikzpicture}
+      \fill[bg] (0,0) rectangle (0.6\paperwidth, \crns@progressinheadfoot@linewidth);
+      \fill[fg] (0,0) rectangle (\crns@progressinheadfoot, \crns@progressinheadfoot@linewidth);
+    \end{tikzpicture}%
+    \tikzexternalenable%
+  \end{beamercolorbox}
+}
+\AtBeginDocument{%
+  \apptocmd{\appendix}{%
+    \pgfkeys{%
+      /crns/outer/.cd,
+      numbering=none,
+      progressbar=none}
+    }{}{}
+}
+\crns@outer@setdefaults
+\ProcessPgfPackageOptions{/crns/outer}
+\endinput
+%%
+%% End of file `beamerouterthemecrns.sty'.
