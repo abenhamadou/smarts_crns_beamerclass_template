@@ -1,0 +1,1 @@
+# smarts_crns_beamerclass_template
